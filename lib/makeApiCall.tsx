@@ -3,7 +3,7 @@
 import {HolidayInfo} from "../types.ts";
 // import { useState } from "react";
 
-const HOLIDAY_API_KEY = process.env.HOLIDAY_API_KEY!
+const HOLIDAY_API_KEY = process.env.HOLIDAY_API_KEY
 
 
 export default async function getHolidays(month: string, day: string) {
