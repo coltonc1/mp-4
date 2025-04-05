@@ -35,7 +35,6 @@ export default function Christmas() {
       getHolidaysData();
     }, [])
 
-  console.log(data)
 
   // Need this instead of data.map because I was getting too many errors with it
     const holidays = [];

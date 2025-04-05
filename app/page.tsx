@@ -30,8 +30,8 @@ export default function Home() {
         <StyledH1>Hello, welcome to my Holiday Api website</StyledH1>
         <StyledH2>Please visit a link at the navigation at the top to</StyledH2>
         <StyledH2>see different holidays occuring on other popular holidays</StyledH2>
-        <StyledH3>Note: Sometimes the nextjs will remove the data for some reason after it has loaded,</StyledH3>
-        <StyledH3>please just refresh if you do not see any holidays</StyledH3>
+        <StyledH3>Note: Sometimes the api will return nothing if you request too quickly,</StyledH3>
+        <StyledH3>sp please just refresh if you do not see any holidays</StyledH3>
       </StyledDiv>
     </>
   );
