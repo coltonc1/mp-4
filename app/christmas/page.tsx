@@ -19,20 +19,21 @@ export default function Christmas() {
   
   
   useEffect(() => {
-    async function getHolidaysData() {
-      const tempData = await getHolidays("12", "25");
-      setData(tempData);
-    }
-    try {
+      async function getHolidaysData() {
+        try {
+          const tempData = await getHolidays("12", "25");
+          setData(tempData);
+        } catch {
+          return (
+            <>
+            <h1>An error occured, either the API is not responding, or there are no  holidays available at this date</h1>
+            </>
+          )
+        }
+      }
+  
       getHolidaysData();
-    } catch {
-      return (
-        <>
-        <h1>An error occured, either the API is not responding, or there are no  holidays available at this date</h1>
-        </>
-      )
-    }
-  }, [])
+    }, [])
 
   console.log(data)
 

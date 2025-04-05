@@ -19,18 +19,19 @@ export default function NewYears() {
   
   useEffect(() => {
     async function getHolidaysData() {
-      const tempData = await getHolidays("1", "1");
-      setData(tempData);
+      try {
+        const tempData = await getHolidays("1", "1");
+        setData(tempData);
+      } catch {
+        return (
+          <>
+          <h1>An error occured, either the API is not responding, or there are no  holidays available at this date</h1>
+          </>
+        )
+      }
     }
-    try {
-      getHolidaysData();
-    } catch {
-      return (
-        <>
-        <h1>An error occured, either the API is not responding, or there are no  holidays available at this date</h1>
-        </>
-      )
-    }
+
+    getHolidaysData();
   }, [])
 
   console.log(data)
