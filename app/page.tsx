@@ -1,10 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import HolidayPreview from "./HolidayPreview.tsx";
-import getHolidays from "../lib/makeApiCall.tsx";
-import { HolidayInfo } from "../types";
-import { useState, useEffect } from "react";
 
 const StyledDiv = styled.div`
   display: flex;

@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
   align-items: center;
 `;
 
-export default function Christmas() {
+export default function NewYears() {
 
   const [data, setData] = useState<HolidayInfo[]>([]);
 
@@ -24,7 +24,7 @@ export default function Christmas() {
     }
     try {
       getHolidaysData();
-    } catch (e) {
+    } catch {
       return (
         <>
         <h1>An error occured, either the API is not responding, or there are no  holidays available at this date</h1>
@@ -36,7 +36,7 @@ export default function Christmas() {
   console.log(data)
 
   // Need this instead of data.map because I was getting too many errors with it
-  let holidays = [];
+  const holidays = [];
   for(let i = 0; i < data.length; i++) {
     holidays.push(<HolidayPreview key={data[i].name} holiday={data[i]}/>)
   }
